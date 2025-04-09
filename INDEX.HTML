@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>CASE123</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .logo img {
+      height: 60px;
+    }
+
+    .nav-right {
+      font-size: 18px;
+    }
+
+    .promo {
+      background-color: #ffffff;
+      text-align: center;
+      padding: 60px 20px;
+      position: relative;
+    }
+
+    .promo img {
+      max-height: 300px;
+      margin-bottom: 20px;
+    }
+
+    .promo h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      color: #1d2b3a;
+    }
+
+    .promo p {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .promo button {
+      background-color: #1d2b3a;
+      color: white;
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: white;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+    }
+
+    nav div {
+      padding: 15px 30px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    nav div:hover, nav div.active {
+      background-color: #1d2b3a;
+      color: white;
+    }
+
+    .product-section {
+      display: flex;
+      margin: 30px;
+    }
+
+    .ad-side {
+      flex: 1;
+      background-color: #ddd;
+      height: 500px;
+      margin: 0 10px;
+      text-align: center;
+      line-height: 500px;
+      font-weight: bold;
+    }
+
+    .products {
+      flex: 4;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .product {
+      background-color: white;
+      width: 180px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .product p {
+      font-weight: bold;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <!-- 이미지 삽입 위치: 로고 -->
+      <img src="logo.png" alt="CASE123 Logo">
+    </div>
+    <div class="nav-right">
+      로그인 | MY정보
+    </div>
+  </header>
+
+  <section class="promo">
+    <!-- 이미지 삽입 위치: 프로모션 이미지 -->
+    <img src="promo_case_image.png" alt="Promo Image">
+    <h1>CASE123</h1>
+    <p>간편하게 보호하세요</p>
+    <button>구매하기</button>
+  </section>
+
+  <nav>
+    <div class="active">케이스</div>
+    <div>휴대폰 용품</div>
+    <div>컴퓨터 용품</div>
+    <div>콜라보 제품</div>
+  </nav>
+
+  <div class="product-section">
+    <div class="ad-side">AD</div>
+    <div class="products">
+      <!-- 이미지 삽입 위치: 추천 제품 이미지들 -->
+      <div class="product">
+        <img src="case1.png" alt="케이스1">
+        <p>케이스1</p>
+        <p>₩15,000</p>
+      </div>
+      <div class="product">
+        <img src="case2.png" alt="케이스2">
+        <p>케이스2</p>
+        <p>₩15,000</p>
+      </div>
+      <div class="product">
+        <img src="case3.png" alt="케이스3">
+        <p>케이스3</p>
+        <p>₩15,000</p>
+      </div>
+      <div class="product">
+        <img src="case4.png" alt="케이스4">
+        <p>케이스4</p>
+        <p>₩15,000</p>
+      </div>
+      <div class="product">
+        <img src="case5.png" alt="케이스5">
+        <p>케이스5</p>
+        <p>₩15,000</p>
+      </div>
+      <div class="product">
+        <img src="case6.png" alt="케이스6">
+        <p>케이스6</p>
+        <p>₩15,000</p>
+      </div>
+      <div class="product">
+        <img src="case7.png" alt="케이스7">
+        <p>케이스7</p>
+        <p>₩15,000</p>
+      </div>
+      <div class="product">
+        <img src="case8.png" alt="케이스8">
+        <p>케이스8</p>
+        <p>₩15,000</p>
+      </div>
+    </div>
+    <div class="ad-side">AD</div>
+  </div>
+
+  <script>
+    // 학업용 알림창
+    alert("이 페이지는 학업을 위한 용도로 제작되었습니다.");
+
+    const menuItems = document.querySelectorAll("nav div");
+    menuItems.forEach(item => {
+      item.addEventListener("click", () => {
+        menuItems.forEach(i => i.classList.remove("active"));
+        item.classList.add("active");
+      });
+    });
+  </script>
+
+</body>
+</html>
